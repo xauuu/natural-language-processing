@@ -1,0 +1,1059 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hệ thống quản lý đào tạo - Trường Đại học CNTT&TT Việt - Hàn</title>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">   
+    <!-- Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+    <!-- NProgress -->
+    <link href="https://daotao.vku.udn.vn/vendor/nprogress/nprogress.css" rel="stylesheet">
+    <!-- iCheck -->
+    <link href="https://daotao.vku.udn.vn/vendor/iCheck/skins/flat/green.css" rel="stylesheet">
+	
+    <!-- bootstrap-progressbar -->
+    <link href="https://daotao.vku.udn.vn/vendor/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="https://daotao.vku.udn.vn/vendor/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- bootstrap-daterangepicker -->
+    <link href="https://daotao.vku.udn.vn/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Datatables -->
+    <link href="https://daotao.vku.udn.vn/vendor/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="https://daotao.vku.udn.vn/vendor/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="https://daotao.vku.udn.vn/vendor/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="https://daotao.vku.udn.vn/vendor/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="https://daotao.vku.udn.vn/vendor/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+
+	
+    <!-- jquery -->
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Custom Theme Style -->
+    <link href="https://daotao.vku.udn.vn/public/gv/build/css/custom.min.css" rel="stylesheet">
+	
+      <meta name="csrf-token" content="wgZu0cN0AvCCnBK7aXCMsdL12MJYWxbJUck2Fwjd" />
+  </head>
+
+  <body class="nav-md">
+    <div class="container body">
+      <div class="main_container">
+        <div class="col-md-3 left_col">
+          <div class="left_col scroll-view">
+            <div class="navbar nav_title" style="border: 0;">
+              <a href="/" class="site_title"><i class="fa fa-university"></i> <span>VKU!</span></a>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <!-- menu profile quick info -->
+            <div class="profile clearfix">
+              <div class="profile_pic">
+                <img style="max-height:100px" src='https://daotao.vku.udn.vn/uploads/sinhvien/19IT008.jpg' alt="" class='img-circle profile_img'>
+              </div>
+              <div class="profile_info">
+                <span>Xin chào,</span>
+				                <h2 title="nthgiang.19it1@vku.udn.vn 0854356812 0385476657 ">Ngô Thị Hương  Giang</h2>
+				              </div>
+            </div>
+            <!-- /menu profile quick info -->
+
+            <br />
+
+            <!-- sidebar menu -->
+            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+              <div class="menu_section">
+                               <h3>TUẦN HỌC THỨ 8</h3>
+                <ul class="nav side-menu">
+                  
+				    
+                  <li title="nthgiang.19it1@vku.udn.vn" ><a href="#" ><i class="fa fa-street-view"></i>Lý lịch sinh viên</a>
+					<ul class="nav child_menu">
+							<li><a href="/sv/hoso" ><i class="fa fa-bar-chart"></i>Quản lý lý lịch</a> </li>
+							<li><a href="/sv/tam-tru" ><i class="fa fa-user"></i>Khai báo tạm trú</a></li>
+							<li><a href="/sv/bao-cao-covid" >Cập nhật trạng thái Covid</a></li>
+							<li><a href="/sv/cap-nhat-mui-tiem" >Cập nhật mũi tiêm Vaccine</a> </li>
+							
+						</ul>
+                  </li>
+				  				  
+				  <!--
+				   <li title="nthgiang.19it1@vku.udn.vn" ><a href="#" ><i class="fa fa-bookmark"></i>Đăng ký chuyên ngành</a>
+						<ul class="nav child_menu">
+						
+						<li><a href="https://daotao.vku.udn.vn/sv/khao-sat-chuyen-nganh" ><i class="fa fa-bar-chart"></i>Khảo sát đăng ký</a> </li>
+							<li><a href="https://daotao.vku.udn.vn/sv/dang-ky-chuyen-nganh" ><i class="fa fa-bookmark"></i>Đăng ký chuyên ngành</a> </li>
+							<li><a href="https://daotao.vku.udn.vn/sv/dang-ky-chuyen-nganh-gcp" ><i class="fa fa-bookmark"></i>Đăng ký Chương Trình Đào tạo Toàn Câu</a> </li>
+						</ul>
+				   </li>
+				   -->
+				  <li><a href="#" ><i class="fa fa-plus-circle"></i>Đăng ký tín chỉ</a>
+				  <ul class="nav child_menu">
+					  <li><a href="https://daotao.vku.udn.vn/sv/dang-ky-tin-chi" ><i class="fa fa-bookmark"></i>Đăng ký khối lượng</a></li>
+					  <li><a href="https://daotao.vku.udn.vn/sv/dang-ky-hoc-ghep" ><i class="fa fa-book"></i>Đăng ký học cải thiện</a></li>
+					  <li><a href="https://daotao.vku.udn.vn/sv/khao-sat-mo-lop" ><i class="fa fa-book"></i>Khảo sát mở lớp</a></li>
+					  <li><a href="https://daotao.vku.udn.vn/sv/phan-luong-dang-ky" ><i class="fa fa-bookmark"></i>Phân luồng đăng ký</a></li>
+					  <li><a href="https://daotao.vku.udn.vn/sv/hoc-phan-con-lai" ><i class="fa fa-bookmark"></i>Tiến độ học tập</a></li>
+					  <!--<li><a href="https://daotao.vku.udn.vn/sv/xac-nhan-hoc" ><i class="fa fa-book"></i>Xác nhận khối lượng</a></li>-->
+				  </ul>  
+                  
+                  </li>
+				   <li><a href="#" ><i class="fa fa-calendar"></i>Thời khóa biểu</a>
+				  <ul class="nav child_menu">
+					 
+                  <li><a href="https://daotao.vku.udn.vn/sv/tkb" ><i class="fa fa-clock-o"></i>Lịch học theo tuần</a>
+                  <li><a href="https://daotao.vku.udn.vn/sv/lich-hoc" ><i class="fa fa-calendar-o"></i>Lịch học chi tiết</a>
+                  <li><a href="https://daotao.vku.udn.vn/sv/lich-thi" ><i class="fa fa-calendar-o"></i>Lịch thi</a>
+                  <li><a href="https://daotao.vku.udn.vn/sv/thoi-khoa-bieu" ><i class="fa fa-calendar-o"></i>Thời khóa biểu toàn khóa</a>
+				  
+				  
+				  </ul>
+				  
+                  </li>
+				   <li><a href="#" ><i class="fa fa-inbox"></i>Lớp học phần</a>
+				    <ul class="nav child_menu">
+					 <li><a href="https://daotao.vku.udn.vn/sv/lop-hoc-phan" ><i class="fa fa-table"></i> Lớp học phần</a></li>
+					 <li><a href="http://elearning.vku.udn.vn/my/" ><i class="fa fa-university"></i>Truy cập Elearning</a></li>
+                    </ul>
+                  </li>
+				  
+				  <li><a href="https://daotao.vku.udn.vn/sv/do-an-cua-toi" ><i class="fa fa-calendar"></i>Lớp đồ án</a>
+                  </li>
+				  
+				   <li><a href="#" ><i class="fa fa-phone"></i>Danh bạ điện thoại</a>
+				    <ul class="nav child_menu">
+                  <li><a href="https://daotao.vku.udn.vn/sv/lienheGV" ><i class="fa fa-users"></i>Liên hệ Giảng viên</a></li>
+                  <li><a href="https://daotao.vku.udn.vn/sv/lienheSV" ><i class="fa fa-phone"></i>Danh bạ sinh viên</a></li>
+				  </ul>
+				  </li>
+				  <li><a href="#" ><i class="fa fa-print"></i>Kết quả học tập</a>
+				    <ul class="nav child_menu">
+					
+					 <li><a href="https://daotao.vku.udn.vn/sv/diem" ><i class="fa fa-bookmark"></i>Điểm học phần</a></li>
+					 <li><a href="https://daotao.vku.udn.vn/sv/xet-hoc-vu/ky-hoc?" ><i class="fa fa-user"></i>Kết quả xét học vụ</a></li>
+					 <li><a href="https://daotao.vku.udn.vn/sv/chung-chi?" ><i class="fa fa-user"></i>Chứng chỉ tốt nghiệp</a></li>
+					</ul>
+					</li>
+					<li><a href="#" ><i class="fa fa-print"></i>Kết quả rèn luyện</a>
+				    <ul class="nav child_menu">
+						<li><a href="/sv/danh-gia" ><i class="fa fa-user"></i>SV tự đánh giá</a></li>
+												<!--<li><a href="#" ><i class="fa fa-user"></i>Kết quả đánh giá</a></li>-->
+					</ul>
+					</li>
+				  <li><a href="#" ><i class="fa fa-money"></i>Học phí</a>
+				    <ul class="nav child_menu">
+					
+					  <li><a href="https://daotao.vku.udn.vn/sv/hoc-phi" ><i class="fa fa-credit-card"></i>Học phí đã nộp</a></li>
+					  <li><a href="https://daotao.vku.udn.vn/sv/hoc-phi-sap-nop" ><i class="fa fa-book"></i>Học phí sắp tới</a></li>
+					</ul>
+					</li>
+				  
+				  <li><a href="#" ><i class="fa fa-commenting"></i>Khảo sát ý kiến</a>
+				    <ul class="nav child_menu">
+												<!--<li><a href="" ><i class="fa fa-folder-open-o"></i>Khảo sát mở lớp</a> </li>-->
+						<li><a href="https://daotao.vku.udn.vn/sv/diem" ><i class="fa fa-users"></i>Đánh giá lớp học phần</a> </li>
+						<li><a href="https://daotao.vku.udn.vn/sv/khao-sat-viec-lam" ><i class="fa fa-table"></i>Khảo sát việc làm thêm</a> </li>
+						<li><a href="/sv/khao-sat/lam-khao-sat/khao-sat-chat-luong-hoat-dong-phuc-vu-dao-tao" ><i class="fa fa-book"></i>Chất lượng phục vụ</a> </li>
+						<li><a href="/sv/khao-sat/lam-khao-sat/khao-sat-thiet-bi-phuc-vu-hoc-tap" ><i class="fa fa-book"></i>Thiết bị phục vụ học</a> </li>
+					</ul>
+					</li>
+					
+				 
+				  
+                
+                </ul>
+              </div>
+            </div>
+            <!-- /sidebar menu -->
+			<div class="sidebar-footer hidden-small">
+              <a data-toggle="tooltip" data-placement="top" title="Tùy chỉnh">
+                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="FullScreen" onclick="openFullscreen()" >
+                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" href="/sv/quanlylop" title="Nhập vai trò quản lý lớp">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+              </a>
+              <a data-toggle="tooltip" data-placement="top" title="Thoát" href="/sv/logout">
+                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+              </a>
+            </div>
+            
+            <!-- /menu footer buttons -->
+          </div>
+        </div>
+
+        <!-- top navigation -->
+        <div class="top_nav">
+          <div class="nav_menu">
+            <nav>
+
+              <div class="nav toggle">
+                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+              </div>
+
+              <ul class="nav navbar-nav navbar-right">
+                <li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="https://daotao.vku.udn.vn/uploads/sinhvien/19IT008.jpg" alt="">Ngô Thị Hương  Giang - 19IT008
+                    <!-- <span class=" fa fa-angle-down"></span> -->
+                  </a>
+                  
+                  <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  
+                    <li><a href="/sv/logout/"><i class="fa fa-sign-out pull-right"></i> Thoát</a></li>
+                  </ul>
+                  
+                </li>
+				
+				<li class="">
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    Học kỳ 1 - 2022-2023                    <span class=" fa fa-angle-down"></span> 
+                  </a>
+                  
+                   <ul class="dropdown-menu dropdown-usermenu pull-right" onclick="event.stopPropagation()" style="min-width: 420px;">
+                  <li>
+				  						<div class="row"style="padding-top:10px;">
+							<div class="col-xs-1"></div>
+							<div class="col-xs-4">
+								<div class="form-group">
+									<label for="hocky" class="control-label">Học kỳ:</label>
+									<select name="hocky" id="hocky" class="form-control">
+										  										  										  										  											  <option  selected value="1">Học kỳ 1</option>
+											  <option   value="2">Học kỳ 2</option>
+											  <option   value="3">Học kỳ hè</option>
+									</select>
+								</div>
+							</div>
+							<div class="col-xs-4">
+								<div class="form-group">
+									<label for="namhoc" class="control-label">Năm học:</label>
+									<select class="namhoc form-control col-md-5" id="namhoc">
+									 																											  $namhientai = "";
+																		<option  value="1">
+									  2017 - 2018
+									</option>
+								  																											  $namhientai = "";
+																		<option  value="2">
+									  2018 - 2019
+									</option>
+								  																											  $namhientai = "";
+																		<option  value="3">
+									  2019 - 2020
+									</option>
+								  																																																						  $namhientai = "";
+																		<option  value="4">
+									  2020 - 2021
+									</option>
+								  																																													  $namhientai = "";
+																		<option  value="5">
+									  2021 - 2022
+									</option>
+								  																																																						<option selected value="6">
+									  2022 - 2023
+									</option>
+								  																	  </select>
+								</div>
+							</div>
+							
+							<div class="col-xs-3 nopadding-left">
+								<label class="control-label"></label>
+								<div class="form-control-static">
+									<script>
+									function changehocky(){
+										namhoc = $('#namhoc').val();
+										hocky = $('#hocky').val();
+										window.location.assign("/gv/doi-hoc-ky?namhoc="+namhoc+"&hocky="+hocky);
+									}
+									</script>
+									<button type="button" class="btn btn-primary" onclick="changehocky()">OK</button>
+								</div>
+							</div>
+						</div>
+					</li>
+                  </ul>
+                </li>
+				</ul>
+            </nav>
+          </div>
+        </div>
+        <!-- /top navigation -->
+
+        <!-- page content -->
+
+          <!-- top tiles -->
+        <div class="right_col" role="main">
+          <div class="">
+            <div class="row">
+                <!-- page content -->
+
+    <!-- top tiles -->
+    <div class="col-md-12">
+        <div class="x_panel">
+            <div class="x_content">
+                <div class="row">
+                      <div class="x_title row">
+        			 
+			<div class="col-md-5">
+			
+			<h2>Danh sách lớp sinh hoạt 19IT1</h2>
+			</div>
+			            
+						
+        </h2>
+        <div class="clearfix"></div>
+      </div>
+      <div class="x_content">
+        <p class="text-muted font-13 m-b-30">
+
+        </p>
+		
+        <table  style="margin-top:-20px;" class="table table-striped table-bordered">
+          <thead>
+          <tr>
+            <th>STT</th>
+            <th>Ảnh</th>
+            <th>Họ đêm</th>
+            <th>Tên</th> <th>mã sv</th>
+            <th>Ngày sinh</th>
+            <th>Giới tính</th>
+            <th width="20%">Tên lớp sinh hoạt</th>
+            <th>Điện thoại</th>
+            <th>Email</th>
+            <th>Ghi chú</th>
+          </tr>
+          </thead>
+
+          <tbody class="lophocphan">
+									<tr>
+						<td>1</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT001.jpg' alt=""></td>
+						<td>Nguyễn Văn</td>
+						<td>An</td><td>19IT001</td>
+						<td>2001-01-23</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0906554075</td>
+						<td>nvan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>2</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT002.jpg' alt=""></td>
+						<td>Võ Trần Quốc </td>
+						<td>Anh</td><td>19IT002</td>
+						<td>2001-05-24</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0362748014</td>
+						<td>vtqanh.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>3</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT003.jpg' alt=""></td>
+						<td>Nguyễn Quang </td>
+						<td>Chung</td><td>19IT003</td>
+						<td>2001-01-09</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0377824995</td>
+						<td>nqchung.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>4</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT006.jpg' alt=""></td>
+						<td>Trần Quang </td>
+						<td>Đạt</td><td>19IT006</td>
+						<td>2001-06-12</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0886381845</td>
+						<td>tqdat.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>5</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT007.jpg' alt=""></td>
+						<td>Cáp Văn </td>
+						<td>Đức</td><td>19IT007</td>
+						<td>2001-04-19</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0354941620</td>
+						<td>cvduc.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>6</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT008.jpg' alt=""></td>
+						<td>Ngô Thị Hương </td>
+						<td>Giang</td><td>19IT008</td>
+						<td>2001-03-05</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0854356812</td>
+						<td>nthgiang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>7</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT009.jpg' alt=""></td>
+						<td>Dương Lê </td>
+						<td>Hà</td><td>19IT009</td>
+						<td>2001-01-02</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0969512417</td>
+						<td>dlha.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>8</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT010.jpg' alt=""></td>
+						<td>Mai Hoàn </td>
+						<td>Hải</td><td>19IT010</td>
+						<td>2001-10-16</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>192201808</td>
+						<td>mhhai.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>9</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT011.jpg' alt=""></td>
+						<td>Nguyễn Sơn </td>
+						<td>Hải</td><td>19IT011</td>
+						<td>2001-10-31</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0826264430</td>
+						<td>nshai.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>10</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT012.jpg' alt=""></td>
+						<td>Võ Đức </td>
+						<td>Hiếu</td><td>19IT012</td>
+						<td>2001-02-22</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0353590632</td>
+						<td>vdhieu.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>11</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT013.jpg' alt=""></td>
+						<td>Mai Anh </td>
+						<td>Hòa</td><td>19IT013</td>
+						<td>2001-09-18</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0706097692</td>
+						<td>mahoa.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>12</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT014.jpg' alt=""></td>
+						<td>Nguyễn Thuận </td>
+						<td>Hòa</td><td>19IT014</td>
+						<td>2001-01-12</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0865527326</td>
+						<td>nthoa.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>13</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT016.jpg' alt=""></td>
+						<td>Lê Việt </td>
+						<td>Hoàng</td><td>19IT016</td>
+						<td>2001-10-13</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0905053975</td>
+						<td>lvhoang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>14</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT017.jpg' alt=""></td>
+						<td>Trần Thanh </td>
+						<td>Hoàng</td><td>19IT017</td>
+						<td>2001-12-04</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0838019145</td>
+						<td>tthoang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>15</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT018.jpg' alt=""></td>
+						<td>Nguyễn Đức </td>
+						<td>Huy</td><td>19IT018</td>
+						<td>2001-10-18</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0929380289</td>
+						<td>ndhuy.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>16</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT019.jpg' alt=""></td>
+						<td>Nguyễn Thị Cẩm</td>
+						<td>Huyền</td><td>19IT019</td>
+						<td>2001-07-07</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0987783627</td>
+						<td>ntchuyen.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>17</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT020.jpg' alt=""></td>
+						<td>Nguyễn Thị Thu </td>
+						<td>Hương</td><td>19IT020</td>
+						<td>2001-07-01</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0398545408</td>
+						<td>ntthuong.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>18</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT021.jpg' alt=""></td>
+						<td>Nguyễn Văn </td>
+						<td>Hữu</td><td>19IT021</td>
+						<td>2001-02-28</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0386544065</td>
+						<td>nvhuu.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>19</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT022.jpg' alt=""></td>
+						<td>Lê Văn </td>
+						<td>Kha</td><td>19IT022</td>
+						<td>2001-03-27</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0969001752</td>
+						<td>lvkha.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>20</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT023.jpg' alt=""></td>
+						<td>Phạm Gia </td>
+						<td>Khải</td><td>19IT023</td>
+						<td>2001-02-11</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0941572258</td>
+						<td>pgkhai.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>21</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT025.jpg' alt=""></td>
+						<td>Nguyễn Hoàng Tuấn </td>
+						<td>Long</td><td>19IT025</td>
+						<td>2001-09-07</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0941062428</td>
+						<td>nhtlong.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>22</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT026.jpg' alt=""></td>
+						<td>Nguyễn Thanh </td>
+						<td>Long</td><td>19IT026</td>
+						<td>2001-12-15</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0832911165</td>
+						<td>ntlong.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>23</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT027.jpg' alt=""></td>
+						<td>Dương Đức </td>
+						<td>Luân</td><td>19IT027</td>
+						<td>2001-02-09</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0373339349</td>
+						<td>ddluan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>24</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT028.jpg' alt=""></td>
+						<td>Nguyễn Thị Trúc </td>
+						<td>Ly</td><td>19IT028</td>
+						<td>2001-03-22</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0708137756</td>
+						<td>nttly.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>25</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT030.jpg' alt=""></td>
+						<td>Nguyễn Thị Thuý</td>
+						<td>Nga</td><td>19IT030</td>
+						<td>2001-12-11</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0327216383</td>
+						<td>nttnga.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>26</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT031.jpg' alt=""></td>
+						<td>Phạm Vũ Thu </td>
+						<td>Nguyệt</td><td>19IT031</td>
+						<td>2001-06-30</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0941257069</td>
+						<td>pvtnguyet.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>27</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT032.jpg' alt=""></td>
+						<td>Hà Công </td>
+						<td>Nhân</td><td>19IT032</td>
+						<td>2001-03-20</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0354046056</td>
+						<td>hcnhan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>28</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT033.jpg' alt=""></td>
+						<td>Nguyễn Ngọc </td>
+						<td>Nhẫn</td><td>19IT033</td>
+						<td>2001-04-28</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0923285942</td>
+						<td>nnnhan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>29</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT034.jpg' alt=""></td>
+						<td>Nguyễn Thị Hồng</td>
+						<td>Nhung</td><td>19IT034</td>
+						<td>2001-07-21</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0948025870</td>
+						<td>nthnhung.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>30</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT035.jpg' alt=""></td>
+						<td>Nguyễn Thị </td>
+						<td>Oanh</td><td>19IT035</td>
+						<td>2001-06-28</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0948193148</td>
+						<td>ntoanh.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>31</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT036.jpg' alt=""></td>
+						<td>Hồ Thanh </td>
+						<td>Phong</td><td>19IT036</td>
+						<td>2001-07-06</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0795525037</td>
+						<td>htphong.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>32</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT037.jpg' alt=""></td>
+						<td>Nguyễn Đức Quang </td>
+						<td>Phú</td><td>19IT037</td>
+						<td>2001-11-02</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0916279648</td>
+						<td>ndqphu.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>33</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT038.jpg' alt=""></td>
+						<td>Phan Thiên </td>
+						<td>Phú</td><td>19IT038</td>
+						<td>2001-04-26</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0378492837</td>
+						<td>ptphu.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>34</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT039.jpg' alt=""></td>
+						<td>Nguyễn Duy </td>
+						<td>Phúc</td><td>19IT039</td>
+						<td>2001-08-16</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0901416277</td>
+						<td>ndphuc.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>35</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT040.jpg' alt=""></td>
+						<td>Phan Văn </td>
+						<td>Phùng</td><td>19IT040</td>
+						<td>2001-05-21</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0971669462</td>
+						<td>pvphung.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>36</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT041.jpg' alt=""></td>
+						<td>Nguyễn Duy </td>
+						<td>Quang</td><td>19IT041</td>
+						<td>2001-09-03</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0392418126</td>
+						<td>ndquang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>37</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT042.jpg' alt=""></td>
+						<td>Trần Anh</td>
+						<td>Quân</td><td>19IT042</td>
+						<td>2001-03-21</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0783587149</td>
+						<td>taquan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>38</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT044.jpg' alt=""></td>
+						<td>Phan Anh </td>
+						<td>Quốc</td><td>19IT044</td>
+						<td>2001-10-20</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0362390435</td>
+						<td>paquoc.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>39</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT047.jpg' alt=""></td>
+						<td>Lê Văn Trường </td>
+						<td>Sơn</td><td>19IT047</td>
+						<td>2001-09-16</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0334161115</td>
+						<td>lvtson.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>40</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT048.jpg' alt=""></td>
+						<td>Đặng Quang </td>
+						<td>Tài</td><td>19IT048</td>
+						<td>2001-08-26</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0364862571</td>
+						<td>dqtai.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>41</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT049.jpg' alt=""></td>
+						<td>Lê Văn </td>
+						<td>Tân</td><td>19IT049</td>
+						<td>2001-02-14</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0336757208</td>
+						<td>lvtan.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>42</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT050.jpg' alt=""></td>
+						<td>Nguyễn Văn Tô </td>
+						<td>Thành</td><td>19IT050</td>
+						<td>2001-10-07</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0792780774</td>
+						<td>nvtthanh.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>43</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT051.jpg' alt=""></td>
+						<td>Hoàng Xuân </td>
+						<td>Thăng</td><td>19IT051</td>
+						<td>2001-01-14</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0348791105</td>
+						<td>hxthang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>44</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT052.jpg' alt=""></td>
+						<td>Phan Trung </td>
+						<td>Thắng</td><td>19IT052</td>
+						<td>2001-08-12</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0763759193</td>
+						<td>ptthang.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>45</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT053.jpg' alt=""></td>
+						<td>Nguyễn Hữu </td>
+						<td>Thiện</td><td>19IT053</td>
+						<td>2001-06-07</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0824777472</td>
+						<td>nhthien.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>46</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT055.jpg' alt=""></td>
+						<td>Trần Thị Ngọc </td>
+						<td>Thủy</td><td>19IT055</td>
+						<td>2001-01-09</td>
+						<td>Nữ</td>
+						<td>19IT1</td>
+						<td>0366438466</td>
+						<td>ttnthuy.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>47</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT056.jpg' alt=""></td>
+						<td>Phạm Trần </td>
+						<td>Triêm</td><td>19IT056</td>
+						<td>2001-04-15</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0934253417</td>
+						<td>pttriem.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>48</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT057.jpg' alt=""></td>
+						<td>Nguyễn Bá </td>
+						<td>Triển</td><td>19IT057</td>
+						<td>2001-09-02</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0347232695</td>
+						<td>nbtrien.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>49</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT058.jpg' alt=""></td>
+						<td>Phạm Ðức </td>
+						<td>Trung</td><td>19IT058</td>
+						<td>2001-10-24</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0946416465</td>
+						<td>pdtrung.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>50</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT059.jpg' alt=""></td>
+						<td>Tạ Hồng </td>
+						<td>Tú</td><td>19IT059</td>
+						<td>2001-09-30</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0382002619</td>
+						<td>thtu.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+											<tr>
+						<td>51</td>
+						<td align="center"><img height="96" src='https://cdn.vku-udn.edu.vn/daotao/sinhvien/19IT060.jpg' alt=""></td>
+						<td>Nguyễn Chơn </td>
+						<td>Uy</td><td>19IT060</td>
+						<td>2001-10-01</td>
+						<td>Nam</td>
+						<td>19IT1</td>
+						<td>0398235881</td>
+						<td>ncuy.19it1@vku.udn.vn</td>
+						<td>Đang cập nhật</td>
+						</tr>
+					          </tbody>
+		</table>
+  </div>
+  
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+
+    <!-- /top tiles -->
+
+    <!-- /page content -->
+            </div>
+          </div>
+        </div>
+        <!-- /page content -->
+
+        <!-- footer content -->
+          <footer>
+            <div class="pull-right">
+              ©Bản quyền thuộc về <a href="//daotao.vku.udn.vn">Trường ĐH CNTT&TT Việt - Hàn</a> - Đại học Đà Nẵng
+            </div>
+            <div class="clearfix"></div>
+          </footer>
+        <!-- /footer content -->
+      </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="https://daotao.vku.udn.vn/vendor/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="https://daotao.vku.udn.vn/vendor/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="https://daotao.vku.udn.vn/vendor/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="https://daotao.vku.udn.vn/vendor/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="https://daotao.vku.udn.vn/vendor/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="https://daotao.vku.udn.vn/vendor/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="https://daotao.vku.udn.vn/vendor/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="https://daotao.vku.udn.vn/vendor/Flot/jquery.flot.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/Flot/jquery.flot.pie.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/Flot/jquery.flot.time.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/Flot/jquery.flot.stack.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="https://daotao.vku.udn.vn/vendor/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="https://daotao.vku.udn.vn/vendor/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="https://daotao.vku.udn.vn/vendor/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <script src="https://daotao.vku.udn.vn/vendor/moment/min/moment.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <!-- Datatables -->
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/jszip/dist/jszip.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/pdfmake/build/pdfmake.min.js"></script>
+    <script src="https://daotao.vku.udn.vn/vendor/pdfmake/build/vfs_fonts.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="https://daotao.vku.udn.vn/public/gv/build/js/custom.min.js"></script>
+	<!-- Load Facebook SDK for JavaScript -->
+	    
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118234607-2"></script>
+<script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118234607-2');
+</script>
+	
+  </body>
+</html>
